@@ -13,6 +13,6 @@ class Task extends Model
     ];
 
     public function employee() {
-        return $this -> belongTo(Employee::class);
+        return $this -> belongsTo(Employee::class);
     }
 }

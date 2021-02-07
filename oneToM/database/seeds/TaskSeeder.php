@@ -1,7 +1,7 @@
 <?php
 
-use App\Task;
 use App\Employee;
+use App\Task;
 use Illuminate\Database\Seeder;
 
 class TaskSeeder extends Seeder

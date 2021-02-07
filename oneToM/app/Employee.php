@@ -9,7 +9,7 @@ class Employee extends Model
 {
     protected $fillable = [
         'name',
-        'lastname',
+        'lastName',
         'dateOfBirth',
     ];
 
