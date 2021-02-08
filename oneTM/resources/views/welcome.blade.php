@@ -168,3 +168,8 @@
     'descr' => $faker -> sentence, --}}
 
     {{-- creo il seeder --}}
+    
+
+    {{-- factory(Typology::class, 12) -> create(); --}}
+
+    {{-- lo aggiungo nel database seeder  --}}

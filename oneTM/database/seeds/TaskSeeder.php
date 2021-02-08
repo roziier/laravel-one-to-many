@@ -15,7 +15,7 @@ class TaskSeeder extends Seeder
      */
     public function run()
     {
-        factory(Task::class, 12)
+        factory(Task::class, 20)
                -> make()
                -> each(function($task) {
 
