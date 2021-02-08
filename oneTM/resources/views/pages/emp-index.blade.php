@@ -17,4 +17,7 @@
 <br>
 <br>
 <a class="btn btn-primary" href="{{ route('task-index')}}">Go to Tasks</a>
+<br>
+<br>
+<a class="btn btn-primary" href="{{ route('typ-index')}}">Go to Typologies</a>
 @endsection

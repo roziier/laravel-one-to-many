@@ -16,6 +16,12 @@
         Description: {{$task -> desc}}
         <br>
         Priority: {{$task -> priority}}
+        @foreach ($task -> typologies as $typology)
+          <li>
+              <a href="">{{ $typology -> name }}</a>
+          </li>
+            
+        @endforeach
     </li>
     @endforeach
 </ul>

@@ -16,4 +16,8 @@
 <br>
 <br>
 <a class="btn btn-primary" href="{{ route('emp-index')}}">Go to Employees</a>
+<br>
+<br>
+<a class="btn btn-primary" href="{{ route('typ-index')}}">Go to Typologies</a>
+
 @endsection
