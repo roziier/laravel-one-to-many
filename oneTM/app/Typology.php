@@ -4,18 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Employee extends Model
+class Typology extends Model
 {
     protected $fillable = [
         'name',
-        'lastname',
-        'dateOfBirth',
+        'descr'
     ];
-    
+
     public function tasks() {
-        return $this -> hasMany(Task::class);
+        return $this -> belongsToMany(Task::class);
     }
-
-   
-
 }

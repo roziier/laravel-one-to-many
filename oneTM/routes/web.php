@@ -20,3 +20,6 @@ Route::get('/', function () {
 // Employee
 Route::get('/empindex', 'EmployeeController@empIndex') -> name('emp-index'); 
 Route::get('/empshow/{id}', 'EmployeeController@empShow') -> name('emp-show'); 
+// Tasks
+Route::get('/taskindex', 'TaskController@taskIndex') -> name('task-index'); 
+Route::get('/taskshow/{id}', 'TaskController@taskShow') -> name('task-show'); 

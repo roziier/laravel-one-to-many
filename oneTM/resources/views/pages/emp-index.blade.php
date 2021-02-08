@@ -14,4 +14,7 @@
 @endforeach
 
 </ul>
+<br>
+<br>
+<a class="btn btn-primary" href="{{ route('task-index')}}">Go to Tasks</a>
 @endsection

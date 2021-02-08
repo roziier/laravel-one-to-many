@@ -116,7 +116,7 @@
 {{-- Schema::create('employee_typology', function (Blueprint $table) {
     $table->id();
 
-    $table-> bigInteger('employee_id') -> unsigned();
+    $table-> bigInteger('task_id') -> unsigned();
     $table-> bigInteger('typology_id') -> unsigned();
 
     $table->timestamps();
@@ -126,22 +126,22 @@
 
 {{-- AGGIUNGO UNO SCHEMA  --}}
 
-{{-- Schema::table('employee_typology', function (Blueprint $table) {
+{{-- Schema::table('task_typology', function (Blueprint $table) {
 
-    $table-> foreign('employee_id', 'et-emp')
+    $table-> foreign('task_id', 'tt-task')
           -> references('id')
           -> on('employees');
-    $table-> foreign('typology_id', 'et-typ')
+    $table-> foreign('typology_id', 'tt-typ')
           -> references('id')
           -> on('typologies');
 }); --}}
 
 {{-- DROP  --}}
 
-{{-- Schema::table('employee_typology', function (Blueprint $table) {
+{{-- Schema::table('type_typology', function (Blueprint $table) {
     
-    $table-> dropForeign('et-typ');
-    $table-> dropForeign('et-emp');
+    $table-> dropForeign('tt-typ');
+    $table-> dropForeign('tt-emp');
           
 }); --}}
 
