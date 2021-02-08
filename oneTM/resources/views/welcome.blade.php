@@ -98,3 +98,73 @@
         </div>
     </body>
 </html>
+
+{{-- creo migrations --}}
+
+{{-- Schema::create('typologies', function (Blueprint $table) {
+    $table->id();
+
+    $table-> string('name') -> unique();
+    $table-> text('descr');
+
+    
+    $table->timestamps();
+}); --}}
+
+{{-- seconda migration  --}}
+
+{{-- Schema::create('employee_typology', function (Blueprint $table) {
+    $table->id();
+
+    $table-> bigInteger('employee_id') -> unsigned();
+    $table-> bigInteger('typology_id') -> unsigned();
+
+    $table->timestamps();
+}); --}}
+
+{{-- migration add foreign  --}}
+
+{{-- AGGIUNGO UNO SCHEMA  --}}
+
+{{-- Schema::table('employee_typology', function (Blueprint $table) {
+
+    $table-> foreign('employee_id', 'et-emp')
+          -> references('id')
+          -> on('employees');
+    $table-> foreign('typology_id', 'et-typ')
+          -> references('id')
+          -> on('typologies');
+}); --}}
+
+{{-- DROP  --}}
+
+{{-- Schema::table('employee_typology', function (Blueprint $table) {
+    
+    $table-> dropForeign('et-typ');
+    $table-> dropForeign('et-emp');
+          
+}); --}}
+
+{{-- creo model typology--}}
+
+{{-- protected $fillable = [
+    'name',
+    'descr'
+]; --}}
+
+{{-- public function employees() {
+    return $this -> belongsToMany(Employee::class);
+} --}}
+
+{{-- entro nel model di employee  --}}
+
+{{-- public function typologies() {
+    return $this -> belongsToMany(Typology::class);
+} --}}
+
+{{-- Adesso creo la factory  --}}
+
+    {{-- 'name' => $faker -> word,
+    'descr' => $faker -> sentence, --}}
+
+    {{-- creo il seeder --}}
