@@ -34,14 +34,10 @@ class TaskController extends Controller
         $task = Task::make($request -> all());
         $task -> employee() -> associate($emp);
         $task -> save();
-
-        dd($data);
         
         $typs = Typology::findOrFail($data['typs']);
         $task -> typologies() -> attach($typs);
-
         $task -> typologies() -> attach($typs);
-        dd($task);
-        // return redirect() -> route('task-index', compact('task'));
+        return redirect() -> route('task-index', compact('task'));
     }
 }
