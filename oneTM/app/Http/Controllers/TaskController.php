@@ -37,12 +37,10 @@ class TaskController extends Controller
         $task -> employee() -> associate($emp);
         $task -> save();
 
-        
-        
         $typs = Typology::findOrFail($data['typs']);
-        $task -> typs() -> attach($typs);
+        $task -> typologies() -> attach($typs);
         
-        return redirect() -> route('task-index', compact('$emp', '$task', 'typs'));
+        return redirect() -> route('task-index');
     }
 
     public function taskEdit($id) {
@@ -64,9 +62,9 @@ class TaskController extends Controller
         $task -> save();
 
         $typs = Typology::findOrFail($data['typs']);
-        $task -> typs() -> sync($typs);
+        $task -> typologies() -> sync($typs);
 
-        return redirect() -> route('task-index', compact('$emp', '$task', 'typs'));
+        return redirect() -> route('task-index');
         
     }
 }
