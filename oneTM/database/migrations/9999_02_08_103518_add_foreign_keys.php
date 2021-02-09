@@ -24,7 +24,7 @@ class AddForeignKeys extends Migration
 
             $table-> foreign('task_id', 'tt-task')
                   -> references('id')
-                  -> on('employees');
+                  -> on('tasks');
             $table-> foreign('typology_id', 'tt-typ')
                   -> references('id')
                   -> on('typologies');

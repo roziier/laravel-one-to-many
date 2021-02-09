@@ -31,4 +31,8 @@ Route::post('/taskupdate/{id}', 'TaskController@taskUpdate') -> name('task-updat
 
 // Typ
 Route::get('/typindex', 'TypologyController@typIndex') -> name('typ-index'); 
-Route::get('/typshow/{id}', 'TypologyController@typShow') -> name('typ-show'); 
+Route::get('/typshow/{id}', 'TypologyController@typShow') -> name('typ-show');
+Route::get('/typcreateform', 'TypologyController@typCreate') -> name('typ-create-form');
+Route::post('/typstore', 'TypologyController@typStore') -> name('typ-store');
+Route::get('/typedit/{id}', 'TypologyController@typEdit') -> name('typ-edit');
+Route::post('/typupdate/{id}', 'TypologyController@typUpdate') -> name('typ-update');

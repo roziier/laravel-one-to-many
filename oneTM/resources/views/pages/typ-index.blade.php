@@ -3,6 +3,7 @@
 
 <h1>Typologies</h1>
 <br>
+<a href="{{route('typ-create-form')}}" class="btn btn-warning">CREATE NEW TYP</a>
 <ul>
 @foreach ($typs as $typ)
     <li>
@@ -10,6 +11,7 @@
             {{ $typ -> name }}
         </a>
     </li>
+    <a class="btn btn-sm btn-success" href="{{route('typ-edit', $typ -> id)}}">Edit</a>
 @endforeach
 
 </ul>
