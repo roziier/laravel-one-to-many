@@ -10,6 +10,7 @@
         <a href="{{ route('task-show', $task -> id)}}">
             {{ $task -> title }}
         </a>
+        <a class="btn btn-sm btn-success" href="{{route('task-edit', $task -> id)}}">Edit</a>
     </li>
 @endforeach
 

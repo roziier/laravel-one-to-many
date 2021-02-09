@@ -25,6 +25,8 @@ Route::get('/taskindex', 'TaskController@taskIndex') -> name('task-index');
 Route::get('/taskshow/{id}', 'TaskController@taskShow') -> name('task-show');
 Route::get('/taskcreateform', 'TaskController@taskCreate') -> name('task-create-form');
 Route::post('/taskstore', 'TaskController@taskStore') -> name('task-store');
+Route::get('/taskedit/{id}', 'TaskController@taskEdit') -> name('task-edit');
+Route::post('/taskupdate/{id}', 'TaskController@taskUpdate') -> name('task-update');
 
 
 // Typ
