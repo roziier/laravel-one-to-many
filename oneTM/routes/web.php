@@ -22,7 +22,11 @@ Route::get('/empindex', 'EmployeeController@empIndex') -> name('emp-index');
 Route::get('/empshow/{id}', 'EmployeeController@empShow') -> name('emp-show'); 
 // Tasks
 Route::get('/taskindex', 'TaskController@taskIndex') -> name('task-index'); 
-Route::get('/taskshow/{id}', 'TaskController@taskShow') -> name('task-show'); 
+Route::get('/taskshow/{id}', 'TaskController@taskShow') -> name('task-show');
+Route::get('/taskcreateform', 'TaskController@taskCreate') -> name('task-create-form');
+Route::post('/taskstore', 'TaskController@taskStore') -> name('task-store');
+
+
 // Typ
 Route::get('/typindex', 'TypologyController@typIndex') -> name('typ-index'); 
 Route::get('/typshow/{id}', 'TypologyController@typShow') -> name('typ-show'); 

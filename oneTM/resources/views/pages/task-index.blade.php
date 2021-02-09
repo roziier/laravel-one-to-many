@@ -3,6 +3,7 @@
 
 <h1>Tasks</h1>
 <br>
+<a href="{{route('task-create-form')}}" class="btn btn-warning">CREATE NEW TASK</a>
 <ul>
 @foreach ($tasks as $task)
     <li>
